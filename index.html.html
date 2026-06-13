@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G. Abirami | Finance & Accounts Professional | UAE VAT Specialist</title>
+<meta name="description" content="G. Abirami — Finance & Accounts Professional specializing in UAE VAT compliance, bookkeeping, financial reporting, and bank reconciliation. Based in Kerala, India.">
+<meta property="og:title" content="G. Abirami | Finance & Accounts Professional">
+<meta property="og:description" content="UAE VAT Specialist | Bookkeeping | Financial Reporting | Compliance Expert">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B1426;
+  --navy-mid: #112040;
+  --navy-light: #1a2f57;
+  --gold: #D4AF37;
+  --gold-light: #e8cc6a;
+  --gold-dim: rgba(212,175,55,0.15);
+  --platinum: #F8F9FA;
+  --slate: #6B7280;
+  --slate-light: #9CA3AF;
+  --white: #ffffff;
+  --glass: rgba(255,255,255,0.04);
+  --glass-border: rgba(212,175,55,0.18);
+  --bg: var(--navy);
+  --bg2: var(--navy-mid);
+  --text: var(--platinum);
+  --text-muted: var(--slate-light);
+  --card-bg: rgba(17,32,64,0.7);
+  --radius: 16px;
+  --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+[data-theme="light"] {
+  --bg: #F0F2F7;
+  --bg2: #ffffff;
+  --text: #0B1426;
+  --text-muted: #6B7280;
+  --card-bg: rgba(255,255,255,0.85);
+  --glass: rgba(11,20,38,0.04);
+  --glass-border: rgba(212,175,55,0.3);
+  --navy-light: #e8edf7;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ── TICKER ── */
+.ticker-wrap {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(11,20,38,0.92);
+  border-top: 1px solid var(--glass-border);
+  padding: 6px 0;
+  overflow: hidden;
+}
+[data-theme="light"] .ticker-wrap { background: rgba(240,242,247,0.92); }
+.ticker-track {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+}
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 32px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--gold);
+}
+.ticker-item span { color: var(--text-muted); font-weight: 400; }
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(11,20,38,0.6);
+  border-bottom: 1px solid var(--glass-border);
+  transition: background var(--transition);
+}
+[data-theme="light"] nav { background: rgba(240,242,247,0.8); }
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: .02em;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.theme-btn {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  background: var(--glass);
+  color: var(--text);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  transition: all var(--transition);
+}
+.theme-btn:hover { border-color: var(--gold); color: var(--gold); }
+.nav-cta {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 100px;
+  background: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 2rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(212,175,55,0.08) 0%, transparent 70%),
+              radial-gradient(ellipse 50% 80% at 20% 80%, rgba(17,32,64,0.6) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: center;
+}
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: .5rem;
+  letter-spacing: -.01em;
+}
+.hero-name em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-role {
+  font-size: clamp(.85rem, 1.5vw, 1rem);
+  color: var(--text-muted);
+  font-weight: 400;
+  letter-spacing: .04em;
+  margin-bottom: 1.75rem;
+  line-height: 1.6;
+}
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
+  max-width: 520px;
+}
+.hero-sub {
+  font-size: .9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 100px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.3); }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 100px;
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--glass-border);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+/* Hero card */
+.hero-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+}
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 1.5rem; right: 1.5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.avatar-ring {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-ring::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(var(--gold) 0deg, transparent 120deg, var(--gold) 240deg, transparent 360deg);
+  animation: spin 8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.avatar-inner {
+  width: 154px;
+  height: 154px;
+  border-radius: 50%;
+  background: var(--navy-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--gold);
+  overflow: hidden;
+}
+[data-theme="light"] .avatar-inner { background: #d0d8ee; }
+.hero-card-name {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.hero-card-title {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--gold);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 1.25rem;
+}
+.stat-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: .85rem;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #4ade80;
+  margin-top: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+.status-dot::before {
+  content: '';
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(1.3); }
+}
+
+/* ── SECTIONS ── */
+section { padding: 6rem 2rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .75rem;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+.section-desc {
+  font-size: .9rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 560px;
+}
+.gold-line {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.5rem 0 3rem;
+}
+
+/* ── ABOUT ── */
+#about { background: var(--bg2); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.about-text p {
+  font-size: .95rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+.about-text strong { color: var(--text); font-weight: 500; }
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 2rem;
+}
+.value-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  transition: all var(--transition);
+}
+.value-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.value-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+.value-desc { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.about-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--text);
+  padding: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 2rem;
+}
+
+/* ── TIMELINE ── */
+#experience { position: relative; }
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+}
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all .6s cubic-bezier(0.4,0,0.2,1);
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.timeline-dot {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  transition: all var(--transition);
+}
+.timeline-item:hover .timeline-dot {
+  background: var(--gold);
+  box-shadow: 0 0 16px rgba(212,175,55,0.5);
+}
+.timeline-period {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .35rem;
+}
+.timeline-role {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: .1rem;
+}
+.timeline-company {
+  font-size: .8rem;
+  color: var(--text-muted);
+  margin-bottom: .75rem;
+  letter-spacing: .03em;
+}
+.timeline-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: .75rem;
+}
+.tag {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--gold-dim);
+  color: var(--gold);
+  border: 1px solid rgba(212,175,55,0.25);
+}
+.timeline-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.timeline-list li {
+  font-size: .85rem;
+  color: var(--text-muted);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+.timeline-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: .75rem;
+}
+
+/* ── SKILLS ── */
+#skills { background: var(--bg2); }
+.skills-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  align-items: end;
+}
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.skill-group {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all var(--transition);
+}
+.skill-group:hover { border-color: var(--gold); }
+.skill-group-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .75rem;
+}
+.skill-name { font-size: .82rem; color: var(--text); }
+.skill-bar-wrap {
+  width: 80px;
+  height: 3px;
+  background: var(--glass-border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.skill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 100px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── CERTS ── */
+#certifications { }
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.cert-card {
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.cert-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+.cert-card:hover::after { transform: scaleX(1); }
+.cert-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.cert-title { font-size: .9rem; font-weight: 500; margin-bottom: .25rem; }
+.cert-issuer { font-size: .75rem; color: var(--gold); letter-spacing: .06em; }
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: .75rem;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  color: #4ade80;
+  background: rgba(74,222,128,0.1);
+  border: 1px solid rgba(74,222,128,0.25);
+  border-radius: 100px;
+  padding: 3px 10px;
+}
+
+/* ── CONTACT ── */
+#contact { background: var(--bg2); }
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 2rem;
+}
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 1rem 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all var(--transition);
+}
+.contact-info-item:hover { border-color: var(--gold); transform: translateX(4px); }
+.contact-info-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: var(--gold-dim);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--gold);
+  flex-shrink: 0;
+  border: 1px solid rgba(212,175,55,0.2);
+}
+.contact-info-label { font-size: 10px; color: var(--text-muted); letter-spacing: .08em; text-transform: uppercase; }
+.contact-info-value { font-size: .85rem; font-weight: 500; }
+
+/* ── FOOTER ── */
+footer {
+  padding: 2rem;
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--gold);
+}
+.footer-copy { font-size: .75rem; color: var(--text-muted); }
+
+/* ── SCROLL ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { max-width: 360px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .skills-header { grid-template-columns: 1fr; }
+  .skills-groups { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+}
+@media (max-width: 600px) {
+  .skills-groups { grid-template-columns: 1fr; }
+  .about-values { grid-template-columns: 1fr; }
+  section { padding: 4rem 1.25rem; }
+  nav { padding: 1rem 1.25rem; }
+  .hero-name { font-size: 2.6rem; }
+  footer { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item">UAE VAT COMPLIANCE <span>✓ FTA Filing</span></span>
+    <span class="ticker-item">BOOKKEEPING <span>Multi-client Management</span></span>
+    <span class="ticker-item">FINANCIAL REPORTING <span>Accuracy-First</span></span>
+    <span class="ticker-item">BANK RECONCILIATION <span>Zero Discrepancies</span></span>
+    <span class="ticker-item">GST FILING <span>India & UAE</span></span>
+    <span class="ticker-item">ZOHO BOOKS <span>Certified</span></span>
+    <span class="ticker-item">TALLY ERP <span>3+ Years</span></span>
+    <span class="ticker-item">ACCOUNTS PAYABLE & RECEIVABLE <span>Full-Cycle</span></span>
+    <span class="ticker-item">MBA — FINANCIAL MANAGEMENT <span>IGNOU</span></span>
+    <!-- Duplicate for seamless loop -->
+    <span class="ticker-item">UAE VAT COMPLIANCE <span>✓ FTA Filing</span></span>
+    <span class="ticker-item">BOOKKEEPING <span>Multi-client Management</span></span>
+    <span class="ticker-item">FINANCIAL REPORTING <span>Accuracy-First</span></span>
+    <span class="ticker-item">BANK RECONCILIATION <span>Zero Discrepancies</span></span>
+    <span class="ticker-item">GST FILING <span>India & UAE</span></span>
+    <span class="ticker-item">ZOHO BOOKS <span>Certified</span></span>
+    <span class="ticker-item">TALLY ERP <span>3+ Years</span></span>
+    <span class="ticker-item">ACCOUNTS PAYABLE & RECEIVABLE <span>Full-Cycle</span></span>
+    <span class="ticker-item">MBA — FINANCIAL MANAGEMENT <span>IGNOU</span></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#hero" class="nav-logo">G. Abirami</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Credentials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle light/dark mode">Night</button>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Introduction">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Finance & Accounts Professional</div>
+      <h1 class="hero-name">G. <em>Abirami</em></h1>
+      <p class="hero-role">UAE VAT Specialist &nbsp;·&nbsp; Bookkeeping &amp; Compliance Expert &nbsp;·&nbsp; MBA Finance</p>
+      <p class="hero-headline">"Transforming Financial Data into Strategic Business Insights"</p>
+      <p class="hero-sub">Experienced finance professional with expertise in UAE VAT filing, bookkeeping, financial reporting, bank reconciliation, and compliance management across India and the UAE.</p>
+      <div class="hero-actions">
+        <a href="mailto:abiramiaami2000@gmail.com" class="btn-primary">↗ Get in Touch</a>
+        <a href="#experience" class="btn-outline">View Experience</a>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="avatar-ring">
+          <div class="avatar-inner">GA</div>
+        </div>
+        <div class="hero-card-name">G. Abirami</div>
+        <div class="hero-card-title">Finance &amp; Accounts Professional</div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num" data-count="3">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="2">0</div>
+            <div class="stat-label">Countries</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-suffix="+">50+</div>
+            <div class="stat-label">Clients Managed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Compliance Rate</div>
+          </div>
+        </div>
+        <div class="status-dot">Open to new opportunities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-label="About">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="fade-up">
+        <div class="section-eyebrow">About Me</div>
+        <h2 class="section-title">Built on <em>precision,</em><br>driven by compliance</h2>
+        <div class="gold-line"></div>
+        <div class="about-text">
+          <p>I'm a detail-oriented Finance & Accounts Professional with <strong>3+ years of experience</strong> spanning a Chartered Accountancy firm in India and a UAE-based accounting consultancy — giving me a rare dual-market perspective on financial compliance.</p>
+          <p>I specialize in <strong>UAE VAT compliance and FTA filings</strong>, bookkeeping for multi-client portfolios, bank reconciliation, and the preparation of financial statements. My work protects businesses from regulatory risk while keeping their books clean and audit-ready.</p>
+          <p>Currently pursuing my <strong>MBA in Financial Management</strong> (IGNOU) and holding a Professional Diploma in Indian & Foreign Accounting with SAP FICO, I bring both practical execution skills and strategic financial thinking to every engagement.</p>
+        </div>
+      </div>
+      <div class="fade-up">
+        <div class="about-quote">"Accuracy is not just a skill — it's a commitment to the businesses and people who trust me with their numbers."</div>
+        <div class="about-values">
+          <div class="value-card">
+            <div class="value-label">Accuracy</div>
+            <div class="value-desc">Zero-error financial records</div>
+          </div>
+          <div class="value-card">
+            <div class="value-label">Compliance</div>
+            <div class="value-desc">UAE VAT & GST specialist</div>
+          </div>
+          <div class="value-card">
+            <div class="value-label">Timeliness</div>
+            <div class="value-desc">Deadline-driven approach</div>
+          </div>
+          <div class="value-card">
+            <div class="value-label">Dual-Market</div>
+            <div class="value-desc">India & UAE expertise</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" aria-label="Professional Experience">
+  <div class="section-inner">
+    <div class="fade-up" style="max-width:560px; margin-bottom:3.5rem;">
+      <div class="section-eyebrow">Career Timeline</div>
+      <h2 class="section-title">Professional <em>Experience</em></h2>
+      <div class="gold-line" style="margin-bottom:0;"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Feb 2026 — Present</div>
+        <div class="timeline-role">Accounting Consultant</div>
+        <div class="timeline-company">Ascentia UAE · Accounting, Auditing & Corporate Services · Remote</div>
+        <div class="timeline-card">
+          <ul class="timeline-list">
+            <li>Manage end-to-end bookkeeping and financial records for multiple UAE-based clients using Zoho Books</li>
+            <li>Handle UAE VAT compliance — calculation, input/output reconciliation, and FTA return filing</li>
+            <li>Maintain general ledgers and perform bank reconciliations to ensure accurate, audit-ready records</li>
+            <li>Coordinate with clients to resolve discrepancies and prepare documentation for audit support</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag">UAE VAT</span>
+            <span class="tag">FTA Compliance</span>
+            <span class="tag">Zoho Books</span>
+            <span class="tag">Bank Reconciliation</span>
+            <span class="tag">Multi-client Bookkeeping</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Feb 2023 — Jan 2026</div>
+        <div class="timeline-role">Audit & Accounts Assistant</div>
+        <div class="timeline-company">Alex Thomas & Associates Chartered Accountants · Trivandrum, Kerala</div>
+        <div class="timeline-card">
+          <ul class="timeline-list">
+            <li>Supported audit seniors across company audits, tax audits, and bank audits for diverse industry clients</li>
+            <li>Prepared Financial Statements and completed year-end account finalization under Indian accounting standards</li>
+            <li>Managed GST compliance end-to-end: preparation, e-way bill generation, and timely submissions</li>
+            <li>Maintained Tally ERP-based financial records for multiple clients with high accuracy and strict deadlines</li>
+          </ul>
+          <div class="timeline-tags">
+            <span class="tag">GST Filing</span>
+            <span class="tag">Tax Audit</span>
+            <span class="tag">Bank Audit</span>
+            <span class="tag">Tally ERP</span>
+            <span class="tag">Winman CA-ERP</span>
+            <span class="tag">Finalization of Accounts</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" aria-label="Skills">
+  <div class="section-inner">
+    <div class="skills-header">
+      <div class="fade-up">
+        <div class="section-eyebrow">Expertise</div>
+        <h2 class="section-title">Core <em>Skills</em></h2>
+        <div class="gold-line" style="margin-bottom:0;"></div>
+      </div>
+      <p class="section-desc fade-up">A blend of technical finance expertise, regulatory knowledge, and software proficiency developed across CA firm and UAE consulting environments.</p>
+    </div>
+    <div class="skills-groups">
+
+      <div class="skill-group fade-up">
+        <div class="skill-group-title">Finance & Accounting</div>
+        <div class="skill-item"><span class="skill-name">UAE VAT Filing</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="95"></div></div></div>
+        <div class="skill-item"><span class="skill-name">GST Preparation</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Bookkeeping</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="95"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Bank Reconciliation</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Financial Reporting</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Accounts Payable/Receivable</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Audit Support</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="87"></div></div></div>
+      </div>
+
+      <div class="skill-group fade-up">
+        <div class="skill-group-title">Software & Tools</div>
+        <div class="skill-item"><span class="skill-name">Zoho Books</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Tally ERP</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Microsoft Excel</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Winman CA-ERP</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Zoho CRM</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div></div>
+        <div class="skill-item"><span class="skill-name">SAP FICO</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Google Workspace</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div></div>
+      </div>
+
+      <div class="skill-group fade-up">
+        <div class="skill-group-title">Professional Skills</div>
+        <div class="skill-item"><span class="skill-name">Client Communication</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Financial Analysis</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Regulatory Compliance</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="93"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Problem Solving</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Time Management</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Documentation</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Adaptability</span><div class="skill-bar-wrap"><div class="skill-bar" data-width="95"></div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" aria-label="Education and Certifications">
+  <div class="section-inner">
+    <div class="fade-up" style="margin-bottom:2rem;">
+      <div class="section-eyebrow">Education & Credentials</div>
+      <h2 class="section-title">Academic <em>Foundation</em></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card fade-up">
+        <div class="cert-title">MBA — Financial Management</div>
+        <div class="cert-issuer">Indira Gandhi Open University · 2023–2025</div>
+        <div class="cert-badge">Post-Graduate</div>
+      </div>
+      <div class="cert-card fade-up">
+        <div class="cert-title">Professional Diploma — Indian & Foreign Accounting with SAP FICO</div>
+        <div class="cert-issuer">G-Tec Computer Education · 2023</div>
+        <div class="cert-badge">Professional Diploma</div>
+      </div>
+      <div class="cert-card fade-up">
+        <div class="cert-title">Bachelor of Commerce — Co-operation</div>
+        <div class="cert-issuer">MMS Government Arts & Science College · 2019–2022</div>
+        <div class="cert-badge">Under-Graduate</div>
+      </div>
+      <div class="cert-card fade-up">
+        <div class="cert-title">Higher Secondary Education (CBSE)</div>
+        <div class="cert-issuer">Kendriya Vidyalaya, Pangode · 2017–2019</div>
+        <div class="cert-badge">Completed</div>
+      </div>
+      <div class="cert-card fade-up">
+        <div class="cert-title">UAE VAT Filing & FTA Compliance</div>
+        <div class="cert-issuer">Hands-on experience · Ascentia UAE</div>
+        <div class="cert-badge">Applied Expertise</div>
+      </div>
+      <div class="cert-card fade-up">
+        <div class="cert-title">IT Basics & MS Office Proficiency</div>
+        <div class="cert-issuer">Ongoing Professional Development</div>
+        <div class="cert-badge">Verified Skills</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact">
+  <div class="section-inner">
+    <div class="fade-up" style="max-width:560px; margin-bottom:2rem;">
+      <div class="section-eyebrow">Get in Touch</div>
+      <h2 class="section-title">Let's work <em>together</em></h2>
+      <div class="gold-line"></div>
+      <p class="section-desc">Open to accounting, VAT compliance, and bookkeeping roles in India or the UAE. Reach out for consulting, full-time, or contract opportunities.</p>
+    </div>
+    <div class="contact-info-cards fade-up" style="max-width:520px;">
+      <a href="mailto:abiramiaami2000@gmail.com" class="contact-info-item">
+        <div class="contact-info-icon">@</div>
+        <div>
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value">abiramiaami2000@gmail.com</div>
+        </div>
+      </a>
+      <a href="tel:+919947060091" class="contact-info-item">
+        <div class="contact-info-icon">Tel</div>
+        <div>
+          <div class="contact-info-label">Phone</div>
+          <div class="contact-info-value">+91 9947 060 091</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/g-abirami-346049260/" target="_blank" rel="noopener" class="contact-info-item">
+        <div class="contact-info-icon">in</div>
+        <div>
+          <div class="contact-info-label">LinkedIn</div>
+          <div class="contact-info-value">G. Abirami — View Profile</div>
+        </div>
+      </a>
+      <div class="contact-info-item" style="cursor:default;">
+        <div class="contact-info-icon">KL</div>
+        <div>
+          <div class="contact-info-label">Location</div>
+          <div class="contact-info-value">Trivandrum, Kerala, India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">G. Abirami</div>
+  <div class="footer-copy">© 2026 · Finance & Accounts Professional · Kerala, India</div>
+  <div style="font-size:.75rem; color:var(--slate);">UAE VAT · GST · Bookkeeping · Compliance</div>
+</footer>
+
+<script>
+// Theme toggle
+const themeBtn = document.getElementById('themeToggle');
+const html = document.documentElement;
+let dark = true;
+themeBtn.addEventListener('click', () => {
+  dark = !dark;
+  html.setAttribute('data-theme', dark ? 'dark' : 'light');
+  themeBtn.textContent = dark ? 'Day' : 'Night';
+});
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      // Animate skill bars when skills section visible
+      const bars = e.target.querySelectorAll('.skill-bar');
+      bars.forEach(bar => {
+        const w = bar.dataset.width;
+        if (w) setTimeout(() => bar.style.width = w + '%', 100);
+      });
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-up, .timeline-item, .skill-group').forEach(el => observer.observe(el));
+
+// Animated counters
+const counterEls = document.querySelectorAll('[data-count]');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const target = parseInt(el.dataset.count);
+      let current = 0;
+      const step = Math.ceil(target / 30);
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current + '+';
+        if (current >= target) { el.textContent = target + '+'; clearInterval(timer); }
+      }, 50);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+counterEls.forEach(el => counterObserver.observe(el));
+
+// Skill groups use same fade-up observer
+document.querySelectorAll('.skill-group').forEach(el => {
+  el.classList.add('fade-up');
+});
+</script>
+</body>
+</html>
